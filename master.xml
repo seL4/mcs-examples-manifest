@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright 2020, Data61
+     Commonwealth Scientific and Industrial Research Organisation (CSIRO)
+     ABN 41 687 119 230.
+
+     This software may be distributed and modified according to the terms of
+     the BSD 2-Clause license. Note that NO WARRANTY is provided.
+     See "LICENSE_BSD2.txt" for details.
+
+     @TAG(DATA61_BSD)
+-->
+<manifest>
+    <remote name="seL4" fetch="../seL4"/>
+    <remote name="SEL4PROJ" fetch="../SEL4PROJ"/>
+    <!-- default revision for each project, and name of the remote -->
+    <default revision="master" remote="seL4"/>
+    <!-- list of 'projects' (i.e repositories), path is relative to the path in remote above -->
+    <project name="seL4.git" path="kernel"/>
+    <project name="seL4_tools.git" path="tools/seL4">
+        <linkfile src="cmake-tool/init-build.sh" dest="init-build.sh"/>
+        <linkfile src="cmake-tool/griddle" dest="griddle"/>
+    </project>
+    <project name="camkes-tool.git" path="projects/camkes-tool">
+        <linkfile src="docs/index.md" dest="README.md"/>
+    </project>
+    <project name="capdl.git" path="projects/capdl"/>
+    <project name="seL4_libs.git" path="projects/seL4_libs"/>
+    <project name="util_libs.git" path="projects/util_libs"/>
+    <project remote="SEL4PROJ" name="sel4runtime" path="projects/sel4runtime"/>
+    <project name="musllibc.git" path="projects/musllibc" revision="sel4"/>
+    <project remote="SEL4PROJ" name="global-components.git" path="projects/global-components"/>
+    <project name="mcs-examples.git" path="projects/sel4mcs">
+    	<linkfile dest="easy-settings.cmake" src="easy-settings.cmake"/>
+  	</project>
+    <project remote="SEL4PROJ" name="seL4_projects_libs.git" path="projects/seL4_projects_libs"/>
+    <project remote="SEL4PROJ" name="projects_libs.git" path="projects/projects_libs"/>
+    <project remote="SEL4PROJ" name="riscv-pk" path="tools/riscv-pk" revision="fix-32bit"/>
+</manifest>

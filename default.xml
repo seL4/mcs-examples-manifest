@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright 2020, Data61
+     Commonwealth Scientific and Industrial Research Organisation (CSIRO)
+     ABN 41 687 119 230.
+
+     This software may be distributed and modified according to the terms of
+     the BSD 2-Clause license. Note that NO WARRANTY is provided.
+     See "LICENSE_BSD2.txt" for details.
+
+     @TAG(DATA61_BSD)
+-->
+<manifest>
+  <remote fetch="../SEL4PROJ" name="SEL4PROJ"/>
+  <remote fetch="../seL4" name="seL4"/>
+  
+  <default remote="seL4" revision="master"/>
+  
+  <project dest-branch="master" name="camkes-tool.git" path="projects/camkes-tool" revision="e720a028ad0edc3f2b5ebd336faf63fedb8427b6" upstream="master">
+    <linkfile dest="README.md" src="docs/index.md"/>
+  </project>
+  <project dest-branch="master" name="mcs-examples.git" path="projects/sel4mcs" remote="SEL4PROJ" revision="e51d9855a0e389ef83be298571158820a8feebeb" upstream="master">
+    <linkfile dest="easy-settings.cmake" src="easy-settings.cmake"/>
+  </project>
+  <project dest-branch="master" name="capdl.git" path="projects/capdl" revision="d86ad2eee429459518b21d08e169c61e0e2aaf2b" upstream="master"/>
+  <project dest-branch="master" name="global-components.git" path="projects/global-components" remote="SEL4PROJ" revision="f0551e76f4651facb11a2b63cf2d3af621eabadd" upstream="master"/>
+  <project dest-branch="sel4" name="musllibc.git" path="projects/musllibc" revision="2af3006b0ccf36ba9ac5123f539d577fd97c5350" upstream="sel4"/>
+  <project dest-branch="master" name="projects_libs.git" path="projects/projects_libs" remote="SEL4PROJ" revision="cfbfec4d8730607d28e9fc662744a4a61a3e35dd" upstream="master"/>
+  <project dest-branch="fix-32bit" name="riscv-pk" path="tools/riscv-pk" remote="SEL4PROJ" revision="d3293c7c23e923338318f3860b2f20dd0b51a016" upstream="fix-32bit"/>
+  <project dest-branch="master" name="seL4.git" path="kernel" revision="6bb71d686e7c65a0f27965d17473d0a06a0d61a6" upstream="master"/>
+  <project dest-branch="master" name="seL4_libs.git" path="projects/seL4_libs" revision="a46a435a596ccb2cb0c559ed7976035b567a3ddb" upstream="master"/>
+  <project dest-branch="master" name="seL4_projects_libs.git" path="projects/seL4_projects_libs" remote="SEL4PROJ" revision="8dc52bb3181b4e39431b9865a4284f3f9364ccdb" upstream="master"/>
+  <project dest-branch="master" name="seL4_tools.git" path="tools/seL4" revision="61bf7fa3e78d9b5c42c816b39eaf4e52dbbf6b93" upstream="master">
+    <linkfile dest="init-build.sh" src="cmake-tool/init-build.sh"/>
+    <linkfile dest="griddle" src="cmake-tool/griddle"/>
+  </project>
+  <project dest-branch="master" name="sel4runtime" path="projects/sel4runtime" remote="SEL4PROJ" revision="8fddd5e8c1d76ee51b6c0d502e666ee431be32c6" upstream="master"/>
+  <project dest-branch="master" name="util_libs.git" path="projects/util_libs" revision="c0c8ddcfac95a09b50e82cfa88367145d7aeaa5e" upstream="master"/>
+</manifest>
+
