@@ -27,13 +27,13 @@
     <project name="capdl.git" path="projects/capdl"/>
     <project name="seL4_libs.git" path="projects/seL4_libs"/>
     <project name="util_libs.git" path="projects/util_libs"/>
-    <project remote="SEL4PROJ" name="sel4runtime" path="projects/sel4runtime"/>
+    <project name="sel4runtime" path="projects/sel4runtime"/>
     <project name="musllibc.git" path="projects/musllibc" revision="sel4"/>
-    <project remote="SEL4PROJ" name="global-components.git" path="projects/global-components"/>
+    <project name="global-components.git" path="projects/global-components"/>
     <project name="mcs-examples.git" path="projects/sel4mcs">
     	<linkfile dest="easy-settings.cmake" src="easy-settings.cmake"/>
   	</project>
-    <project remote="SEL4PROJ" name="seL4_projects_libs.git" path="projects/seL4_projects_libs"/>
-    <project remote="SEL4PROJ" name="projects_libs.git" path="projects/projects_libs"/>
-    <project remote="SEL4PROJ" name="riscv-pk" path="tools/riscv-pk" revision="fix-32bit"/>
+    <project name="seL4_projects_libs.git" path="projects/seL4_projects_libs"/>
+    <project name="projects_libs.git" path="projects/projects_libs"/>
+    <project name="riscv-pk" path="tools/riscv-pk" revision="fix-32bit"/>
 </manifest>
