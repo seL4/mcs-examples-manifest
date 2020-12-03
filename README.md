@@ -9,7 +9,8 @@
 
      @TAG(DATA61_BSD)
 -->
-mcs-example-manifest
-=================
-A collection of native and CAmkES examples demonstrating mcs mechanisms to allow threads of lower 
-priority to run while threads of higher priority are also runnable.
+
+# mcs-example-manifest
+
+A collection of native and CAmkES examples demonstrating mechanisms for
+Mixed-Criticality Systems (MCS).
